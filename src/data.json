@@ -5,7 +5,7 @@
             "title":"Native man",
             "image":"images/dress1.png",
             "description":"trendy mall night party dress, easy fiting",
-            "SizesInStock":["S","x","L","XL","XXL"],
+            "SizesInStock":["S","X","L","XL","XXL"],
             "price":35.90
 
         },
@@ -14,7 +14,7 @@
             "title":"Lorem style",
             "image":"images/dress2.png",
             "description":"stylish partners combination for classy outings",
-            "SizesInStock":["S","x","L","XL","XXL"],
+            "SizesInStock":["S","L","XL"],
             "price":105.90
 
         },
@@ -23,7 +23,7 @@
             "title":"Simple all",
             "image":"images/dress3.png",
             "description":"Mother and Kids neat dress, made with wooden root fibre",
-            "SizesInStock":["S","x","L","XXL"],
+            "SizesInStock":["S","X","L","XXL"],
             "price":20.00
 
         },
@@ -32,7 +32,7 @@
             "title":"Looking good",
             "image":"images/dress4.png",
             "description":"new twin collections of all sizes",
-            "SizesInStock":["S","x","L","XL","XXL"],
+            "SizesInStock":["S","X","XXL"],
             "price":65.66
 
         },
@@ -41,7 +41,7 @@
             "title":"sharp one",
             "image":"images/dress5.png",
             "description":"super white,black and gold queen style, made with African beads",
-            "SizesInStock":["S","x","L","XL","XXL"],
+            "SizesInStock":["S","X","L"],
             "price":102.00
 
         },
@@ -50,7 +50,7 @@
             "title":"freshnezz",
             "image":"images/dress6.png",
             "description":"Easy going with new Accra trend touch",
-            "SizesInStock":["S","x","L","XL","XXL"],
+            "SizesInStock":["L","XL","XXL"],
             "price":70.00
 
         },
@@ -59,7 +59,7 @@
             "title":"cool and simple",
             "image":"images/dress7.png",
             "description":"Kumerica outing in style, nice Kumasi base materials",
-            "SizesInStock":["S","x","L","XL","XXL"],
+            "SizesInStock":["L","XXL"],
             "price":25.00
 
         },
@@ -68,7 +68,7 @@
             "title":"Ghana wear",
             "image":"images/dress8.png",
             "description":"for the boys to men classy wear, a collection of colors available",
-            "SizesInStock":["x","L","XL","XXL"],
+            "SizesInStock":["X","L","XL"],
             "price":55.10
 
         },
@@ -77,7 +77,7 @@
             "title":"Accra wear",
             "image":"images/dress9.png",
             "description":"confy breezy wear for the young in  heart",
-            "SizesInStock":["S","x","L","XL","XXL"],
+            "SizesInStock":["S","XL"],
             "price":80.00
 
         },
@@ -86,7 +86,7 @@
             "title":"Kumasi wear",
             "image":"images/dress10.png",
             "description":"kente mixed with GTp clothing for all size and events",
-            "SizesInStock":["S","x","L","XL","XXL"],
+            "SizesInStock":["S","X","L","XL"],
             "price":40.00
 
         },
@@ -95,7 +95,7 @@
             "title":"Takoradi wear",
             "image":"images/dress11.png",
             "description":"collection of safe COVID safty outing, party with care and safety",
-            "SizesInStock":["S","x","L","XL","XXL"],
+            "SizesInStock":["S","X","L"],
             "price":120.00
 
         },
@@ -104,7 +104,7 @@
             "title":"Sunyani wear",
             "image":"images/dress12.png",
             "description":"Kente hoody collection for confy feeling",
-            "SizesInStock":["S","x","L","XL"],
+            "SizesInStock":["S","X","L","XL"],
             "price":70.00
 
         },
@@ -113,7 +113,7 @@
             "title":"Local gee",
             "image":"images/dress13.png",
             "description":"summer coming ",
-            "SizesInStock":["S","x","L","XL","XXL"],
+            "SizesInStock":["S","X","L","XL","XXL"],
             "price":40.00
 
         },
@@ -122,7 +122,7 @@
             "title":"fonk hit",
             "image":"images/dress14.png",
             "description":"overall sunshine for cool summer day with Adenkra symboles",
-            "SizesInStock":["S","x","L","XL","XXL"],
+            "SizesInStock":["XL","XXL"],
             "price":35.90
 
         }

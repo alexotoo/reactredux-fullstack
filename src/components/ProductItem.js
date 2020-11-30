@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductItem = ({ product }) => {
   const { _id, image, title, description, SizesInStock, price } = product;
-  console.log(product);
+
   return (
     <li className="product__list">
       <article className="product__card">

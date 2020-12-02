@@ -12,7 +12,7 @@ const ProductFilter = ({
       <div className="products-filter__result">{productsCount} Products</div>
       <div className="products-filter__sort">
         Order{" "}
-        <select name="" id="" value={size} onChange={sortProducts}>
+        <select name="" id="" value={sort} onChange={sortProducts}>
           <option>Latest</option>
           <option value="lowest">Lowest</option>
           <option value="highest">Highest</option>{" "}

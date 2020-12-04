@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CartContent from "./components/CartContent";
 import ProductFilter from "./components/ProductFilter";
 import ProductList from "./components/ProductList";
 import data from "./data.json";
+
+let intialCart = localStorage.getItem("cart")
+  ? JSON.parse(localStorage.getItem("cart"))
+  : [];
 
 function App() {
   const initProducts = data.products;
   const [products, setProducts] = useState(initProducts);
   const [size, setSize] = useState("");
   const [sort, setSort] = useState("");
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(intialCart);
   const [isInCart, setIsInCart] = useState(false);
 
   //filter by product price
@@ -61,6 +65,11 @@ function App() {
       setCart([...newCartItems, { ...product, unit: 1 }]);
     }
   };
+
+  //set Cart to local storage
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   //set item units in Card
   const cartItemUnitCount = (product) => {

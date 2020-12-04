@@ -1,7 +1,7 @@
 import React from "react";
 
 const CartContent = ({ cart, cartItemUnitCount, removeItemFromCart }) => {
-  console.log(cart);
+  console.log(cart.length);
 
   //calculate subTotal
   const cartsubTotal = () => {

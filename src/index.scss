@@ -126,9 +126,46 @@ footer {
 }
 
 //filter bar
+
 .products-filter {
   display: flex;
   justify-content: space-evenly;
   margin: 0 0 3rem 0;
   padding: 1rem;
+}
+
+//cart
+.flex-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.bolder {
+  font-weight: bolder;
+}
+.cart {
+  &__items {
+    border-top: 1px solid var(--graylight-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0 1rem 0;
+    &-img {
+      width: 7rem;
+      height: 100%;
+    }
+    &-unit {
+      span {
+        display: inline-block;
+        padding: 0.4rem;
+        width: 2.5rem;
+        text-align: center;
+      }
+      span:not(:nth-child(2)) {
+        font-weight: bolder;
+        background-color: var(--graylight-color);
+        color: var(--white-color);
+      }
+    }
+  }
 }

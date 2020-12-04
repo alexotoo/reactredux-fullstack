@@ -1,12 +1,17 @@
 import React from "react";
 import ProductItem from "./ProductItem";
 
-const ProductList = ({ products }) => {
-  console.log(products);
+const ProductList = ({ products, addProductToCart }) => {
   return (
     <ul className="product">
       {products.map((product) => {
-        return <ProductItem key={product._id} product={product} />;
+        return (
+          <ProductItem
+            key={product._id}
+            product={product}
+            addProductToCart={addProductToCart}
+          />
+        );
       })}
     </ul>
   );

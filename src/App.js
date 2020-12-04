@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CartContent from "./components/CartContent";
 import ProductFilter from "./components/ProductFilter";
 import ProductList from "./components/ProductList";
 import data from "./data.json";
@@ -8,6 +9,8 @@ function App() {
   const [products, setProducts] = useState(initProducts);
   const [size, setSize] = useState("");
   const [sort, setSort] = useState("");
+  const [cart, setCart] = useState([]);
+  const [isInCart, setIsInCart] = useState(false);
 
   //filter by product price
   const sortProducts = (e) => {
@@ -43,6 +46,50 @@ function App() {
     }
   };
 
+  //add item to Cart
+  const addProductToCart = (product) => {
+    const newCartItems = [...cart];
+    let itemInCardAlready = false;
+    newCartItems.forEach((item) => {
+      if (item._id === product._id) {
+        item.unit++;
+        itemInCardAlready = true;
+        setCart(newCartItems);
+      }
+    });
+    if (!itemInCardAlready) {
+      setCart([...newCartItems, { ...product, unit: 1 }]);
+    }
+  };
+
+  //set item units in Card
+  const cartItemUnitCount = (product) => {
+    const newCartItems = [...cart];
+    let values = Object.values(product);
+    newCartItems.forEach((item) => {
+      if (item._id === product._id) {
+        if (values.includes("neg") && item.unit > 1) {
+          item.unit--;
+
+          console.log(product);
+
+          setCart(newCartItems);
+        } else if (values.includes("pos") && item.unit >= 1) {
+          item.unit++;
+
+          setCart(newCartItems);
+        }
+      }
+    });
+  };
+  //remove item fromCart
+  const removeItemFromCart = (product) => {
+    const newCartItems = [...cart];
+    const remainingItemsInCart = newCartItems.filter(
+      (item) => item._id !== product._id
+    );
+    setCart(remainingItemsInCart);
+  };
   return (
     <div className="wrapper">
       <header className="header">
@@ -58,9 +105,18 @@ function App() {
             sortProducts={sortProducts}
             filterProducts={filterProducts}
           />
-          <ProductList products={products} />
+          <ProductList
+            products={products}
+            addProductToCart={addProductToCart}
+          />
         </div>
-        <div className="main__sidebar">side</div>
+        <div className="main__sidebar">
+          <CartContent
+            cart={cart}
+            cartItemUnitCount={cartItemUnitCount}
+            removeItemFromCart={removeItemFromCart}
+          />
+        </div>
       </main>
       <footer className="footer">footer</footer>
     </div>

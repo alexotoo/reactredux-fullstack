@@ -41,14 +41,18 @@ const CartContent = ({ cart, cartItemUnitCount, removeItemFromCart }) => {
                 <div className="cart__items-unit">
                   <span
                     className="neg"
-                    onClick={() => cartItemUnitCount({ ...item, count: "neg" })}
+                    onClick={() =>
+                      cartItemUnitCount({ ...item, count: "--neg" })
+                    }
                   >
                     -
                   </span>{" "}
                   <span>{item.unit}</span>{" "}
                   <span
                     className="pos"
-                    onClick={() => cartItemUnitCount({ ...item, count: "pos" })}
+                    onClick={() =>
+                      cartItemUnitCount({ ...item, count: "++pos" })
+                    }
                   >
                     +
                   </span>

@@ -77,13 +77,10 @@ function App() {
     let values = Object.values(product);
     newCartItems.forEach((item) => {
       if (item._id === product._id) {
-        if (values.includes("neg") && item.unit > 1) {
+        if (values.includes("--neg") && item.unit > 1) {
           item.unit--;
-
-          console.log(product);
-
           setCart(newCartItems);
-        } else if (values.includes("pos") && item.unit >= 1) {
+        } else if (values.includes("++pos") && item.unit >= 1) {
           item.unit++;
 
           setCart(newCartItems);

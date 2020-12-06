@@ -145,6 +145,15 @@ footer {
   font-weight: bolder;
 }
 .cart {
+  width: 80%;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  padding: 2rem;
+  top: 0;
+  z-index: 10;
+  overflow: scroll;
+  background-color: var(--white-color);
   &__items {
     border-top: 1px solid var(--graylight-color);
     display: flex;
@@ -168,4 +177,14 @@ footer {
       }
     }
   }
+}
+//Modal
+.modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.705);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
 }

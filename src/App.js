@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CartContent from "./components/CartContent";
+import ModalCart from "./components/ModalCart";
 import ProductFilter from "./components/ProductFilter";
 import ProductList from "./components/ProductList";
 import data from "./data.json";
@@ -14,7 +15,12 @@ function App() {
   const [size, setSize] = useState("");
   const [sort, setSort] = useState("");
   const [cart, setCart] = useState(intialCart);
-  const [isInCart, setIsInCart] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  //toggel modal
+  const modalToggleHandler = () => {
+    setModalIsOpen(!modalIsOpen);
+  };
 
   //filter by product price
   const sortProducts = (e) => {
@@ -64,6 +70,7 @@ function App() {
     if (!itemInCardAlready) {
       setCart([...newCartItems, { ...product, unit: 1 }]);
     }
+    setModalIsOpen(true);
   };
 
   //set Cart to local storage
@@ -104,6 +111,17 @@ function App() {
 
       <main className="main">
         <div className="main__content">
+          {modalIsOpen ? (
+            <div>
+              <ModalCart modalToggleHandler={modalToggleHandler} />
+              <CartContent
+                cart={cart}
+                cartItemUnitCount={cartItemUnitCount}
+                removeItemFromCart={removeItemFromCart}
+              />
+            </div>
+          ) : null}
+
           <ProductFilter
             productsCount={products.length}
             size={size}
@@ -116,13 +134,7 @@ function App() {
             addProductToCart={addProductToCart}
           />
         </div>
-        <div className="main__sidebar">
-          <CartContent
-            cart={cart}
-            cartItemUnitCount={cartItemUnitCount}
-            removeItemFromCart={removeItemFromCart}
-          />
-        </div>
+        <div className="main__sidebar"></div>
       </main>
       <footer className="footer">footer</footer>
     </div>

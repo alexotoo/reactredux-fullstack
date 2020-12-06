@@ -22,12 +22,20 @@ const CartContent = ({ cart, cartItemUnitCount, removeItemFromCart }) => {
   return (
     <div className="cart">
       <div className="cart__header">
-        {" "}
-        {cart.length === 0 ? (
-          <p>Your cart is empty</p>
-        ) : (
-          <p>{cart.length} Product(s)</p>
-        )}
+        <div> Cart</div>
+        <div className="cart__header-totals">
+          <span>
+            {" "}
+            {cart.length === 0 ? (
+              <p>Your cart is empty</p>
+            ) : (
+              <p>{cart.length} Product(s)</p>
+            )}{" "}
+          </span>
+          <span>total:</span>
+        </div>
+        <div className="cart__header-shopping"> cont.</div>
+        <div className="cart__header-cont"> checkout</div>
       </div>
       <div>
         <ul>

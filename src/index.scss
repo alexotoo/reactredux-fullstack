@@ -145,7 +145,7 @@ footer {
   font-weight: bolder;
 }
 .cart {
-  width: 80%;
+  //width: 80%;
   height: 100vh;
   position: fixed;
   right: 0;
@@ -154,6 +154,8 @@ footer {
   z-index: 10;
   overflow: scroll;
   background-color: var(--white-color);
+  animation: cartSlidIn 500ms ease forwards;
+
   &__items {
     border-top: 1px solid var(--graylight-color);
     display: flex;
@@ -176,6 +178,14 @@ footer {
         color: var(--white-color);
       }
     }
+  }
+}
+@keyframes cartSlidIn {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
   }
 }
 //Modal

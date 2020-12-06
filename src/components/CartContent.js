@@ -1,4 +1,5 @@
 import React from "react";
+import CartInfoBar from "./CartInfoBar";
 
 const CartContent = ({ cart, cartItemUnitCount, removeItemFromCart }) => {
   console.log(cart.length);
@@ -22,20 +23,24 @@ const CartContent = ({ cart, cartItemUnitCount, removeItemFromCart }) => {
   return (
     <div className="cart">
       <div className="cart__header">
-        <div> Cart</div>
-        <div className="cart__header-totals">
-          <span>
-            {" "}
-            {cart.length === 0 ? (
-              <p>Your cart is empty</p>
-            ) : (
-              <p>{cart.length} Product(s)</p>
-            )}{" "}
-          </span>
-          <span>total:</span>
-        </div>
-        <div className="cart__header-shopping"> cont.</div>
-        <div className="cart__header-cont"> checkout</div>
+        {cart.length === 0 ? (
+          <div>
+            <CartInfoBar text={"Your Cart is empty"} background={"green"} />
+            <CartInfoBar text={"Sign In"} background={"green"} />
+            <CartInfoBar text={"Start Shopping"} background={"gray"} />
+          </div>
+        ) : (
+          <div className="cartbardiv">
+            <CartInfoBar text={"Cart"} background={"green"} />
+            <div className="flex bolder">
+              <span>{cart.length} Product(s)</span>
+              <span> Subtotal: ${subTotal}</span>
+            </div>
+
+            <CartInfoBar text={"Continue Shopping"} background={"gray"} />
+            <CartInfoBar text={"Checkout"} background={"orange"} />
+          </div>
+        )}
       </div>
       <div>
         <ul>
